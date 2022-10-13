@@ -11,3 +11,13 @@ mat-card {
 .content> mat-card{
     width: 200px;
 }
+/* .container{
+    border-radius: 5px;
+    border: 2px solid black;
+    width: 80%;
+    height: 80%;
+} */
+mat-form-field{
+    width:40%;
+    margin-top: 2%;
+}

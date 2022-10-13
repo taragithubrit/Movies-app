@@ -1,12 +1,28 @@
-<div style="display:flex" >
+
+<div class="container">
+<div style="display:flex;justify-content: center;">
+    <!-- //search input field-->
+    <mat-form-field >
+        <input type="tel" matInput placeholder="Search" (change)="seacrList($event)">
+        </mat-form-field>
+</div>
+<!-- // display multiple cards -->
+<div style="display:flex;justify-content: center;" *ngFor="let character of item">
+    <!-- <div *ngFor="let character of characters"></div> -->
             <mat-card class="mt-2" style="margin: 1rem;" >
                 <mat-card-header>
-                    <mat-card-title>Move Title</mat-card-title>
+                    <mat-card-title>name-{{ character.show.name}}</mat-card-title>
                    
                    
                 </mat-card-header>
-                <img mat-card-image src="https://i0.wp.com/music.gizprix.com/wp-content/uploads/2020/04/RRR-Songs-download.jpg?resize=1536%2C1536&ssl=1" alt="Photo of a Shiba Inu" width="20%">
-                <mat-card-subtitle>Year ofrelased and movie caste</mat-card-subtitle>
+                <img mat-card-image src="{{character.show.image.medium}}" alt="Photo of a Shiba Inu" width="20%">
+                <mat-card-subtitle>{{character.show.name}}</mat-card-subtitle>
+                <mat-card-content>type - type</mat-card-content>
+                <mat-card-subtitle>language,</mat-card-subtitle>
+                <mat-card-subtitle>summary</mat-card-subtitle>
+                <mat-card-subtitle>genres</mat-card-subtitle>
+                <mat-card-subtitle>statuss</mat-card-subtitle>
+                <mat-card-subtitle>schedule</mat-card-subtitle>
             </mat-card>
             <mat-card class="mt-2" style="margin: 1rem;">
                 <mat-card-header>
@@ -30,6 +46,6 @@
         </div>
         
   
-    
+    </div>
 
 
